@@ -1,0 +1,17 @@
+{
+    "name": "RandomHashtagGenerator",
+    "author": "tinfoilboy <tinfoilboy@tinfoilboy.com>",
+    "description": "A random hashtag generator. Ported to node. Uses Express 3.0.",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/tinfoilboy/RandomHashtagGenerator.git"
+    },
+    "homepage": "http://hashtag.tinfoilboy.com",
+    "license": "Apache-2.0",
+    "version": "1.0.0",
+    "private": false,
+    "dependencies": {
+        "express": ">= 4.x.x",
+        "jade": ">= 1.x.x"
+    }
+}

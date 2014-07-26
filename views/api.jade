@@ -1,0 +1,45 @@
+extends base
+append title
+	title #{title}
+append meta
+	meta(property="og:title", content="Random Hashtag Generator API")
+	meta(property="og:site_name", content="Random Hashtag Generator")
+	meta(property="og:url", content="http://hashtag.tinfoilboy.com")
+	meta(property="og:description", content="An API made for Random Hashtag Generator, a project by tinfoilboy.")
+	meta(property="og:image" content="http://hashtag.tinfoilboy.com/icon_1024.png")
+	meta(property="fb:app_id", content="1421848864732426")
+	meta(property="og:type", content="website")
+	meta(name="description", content="The API page for Random Hashtag Generator, a project by tinfoilboy.")
+append headertitle
+	h1.title Random Hashtag Generator API
+append headersubtitle
+	h2.subtitle An API for the Random Hashtag Generator
+append content
+	div.container
+		h1 Getting a generated hashtag
+		div.well
+			/api/hashtag/generate/
+		br
+		p.
+			Getting a generated hashtag from the Random Hashtag Generator is simple. Just make a GET request to the URL above, and it will return the hashtag, and a permalink to that hashtag in a nice JSON object.
+			By default, we don't return hashtags with profanity in the API, but you can toggle it by appending profane to the url, like below.
+		div.well
+			/api/hashtag/generate/profane/
+		br
+		h1 Getting a permalink from a hashtag
+		div.well
+			/api/hashtag/permalink/?hashtag=(insert hashtag here)
+		br
+		p.
+			Sometimes, you need to get a permalink from a hashtag generated, and you can do that! Just supply the hashtag that you have (without the pound sign before) in a query string called hashtag, and it will return JSON with the permalink, and just in case, the hashtag. An example is below.
+		div.well
+			/api/hashtag/permalink/?hashtag=SlimDjangoAndroid
+		br
+		h1 Getting a hashtag from a permalink
+		div.well
+			/api/permalink/hashtag/?permalink=(insert permalink here)
+		br
+		p.
+			And sometimes, you need to get a hashtag from a permalink, the way you do that is by supplying the permalink of the hashtag in the URL, we will return a JSON string containing the hashtag and the permalink to the hashtag, just in case, the URL example is below.
+		div.well
+			/api/permalink/hashtag/?permalink=U2xpbURqYW5nb0FuZHJvaWQ=
