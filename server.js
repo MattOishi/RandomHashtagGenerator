@@ -1,8 +1,17 @@
 var express = require('express');
 var app = express();
+var compression = require('compression');
 var hashtag = require('./hashtag.js');
+var production = false;
 
-app.use('/', express.static(__dirname + '/public'));
+var twoWeeksCache = 1209600;
+
+app.use(compression());
+
+if (production)
+	app.use('/', express.static(__dirname + '/public', { maxAge: twoWeeksCache }));
+else
+	app.use('/', express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 
@@ -18,6 +27,7 @@ app.get('/', function(req, res) {
 	res.locals.title = "Random Hashtag Generator";
 	res.locals.hashtag = hashtagObj.hashtag;
 	res.locals.permalink = hashtagObj.permalink;
+	res.locals.isProfane = (req.query.profanity) ? true : false;
 	res.render('index');
 });
 

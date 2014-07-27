@@ -6,7 +6,7 @@ append meta
 	meta(property="og:site_name", content="Random Hashtag Generator")
 	meta(property="og:url", content="http://hashtag.tinfoilboy.com")
 	meta(property="og:description", content="A random hashtag generator. Made by Tinfoilboy with &hearts;.")
-	meta(property="og:image" content="http://hashtag.tinfoilboy.com/icon_1024.png")
+	meta(property="og:image" content="http://hashtag.tinfoilboy.com/images/randomhashtaggeneratorlogo_1024.png")
 	meta(property="fb:app_id", content="1421848864732426")
 	meta(property="og:type", content="website")
 	meta(name="description", content="A random hashtag generator. Made by Tinfoilboy with &hearts;.")
@@ -18,7 +18,11 @@ append content
 	div.vertical.center
 		h1.hashtag(style="display: none;") #{hashtag}
 		section.social.buttons(style="display: none;")
-			a.twitter-share-button(href="https://twitter.com/share", data-url="http://hashtag.tinfoilboy.com/##{permalink}", data-size="large", data-hashtags="#{hashtag}") Tweet this Hashtag!
+			div.fb-like(data-href="http://hashtag.tinfoilboy.com" data-width="133px" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true")
+			a.twitter-share-button(href="https://twitter.com/share", data-url="http://hashtag.tinfoilboy.com" data-size="large" data-tweet="Generate some hashtags here!") Tweet this Hashtag!
 			a#permalink.button.green(title="Permalink to Hashtag" data-clipboard-text="http://hashtag.tinfoilboy.com/##{permalink}") Permalink
-			a.button.red(title="Enable Profanity" href="?profanity=1") Enable Profanity
+			if isProfane
+				a.button.red(title="Disable Profanity" href="/") Disable Profanity
+			else
+				a.button.red(title="Enable Profanity" href="/?profanity=1") Enable Profanity
 			a#try-again.button.green(title="Try Again?", href="#") Try Again?

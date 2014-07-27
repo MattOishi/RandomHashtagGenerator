@@ -12,6 +12,7 @@
     "private": false,
     "dependencies": {
         "express": ">= 4.x.x",
+        "compression": ">= 1.x.x",
         "jade": ">= 1.x.x"
     }
 }
