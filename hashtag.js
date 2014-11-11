@@ -262,8 +262,6 @@ var wordListNonProfane = [
 	'harajuku',
 	'Otaku',
 	'Grape',
-	'Drink',
-	'Drank',
 	'Dark',
 	'Drake',
 	'eye',
