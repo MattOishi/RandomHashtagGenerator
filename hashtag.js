@@ -308,7 +308,7 @@ var wordListNonProfane = [
 	'yolo',
 	'swag',
 	'grassroots',
-	'Sause',
+	'Sauce',
 	'bacon',
 	'cheese',
 	'flex',
@@ -318,7 +318,12 @@ var wordListNonProfane = [
 	'who',
 	'drive',
 	'drivers',
-	'best'
+	'best',
+	'bae',
+	'ratchet',
+	'awkward',
+	'turtle',
+	'can'
 
 ];
 var profanity = [
