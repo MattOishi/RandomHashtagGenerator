@@ -266,7 +266,7 @@ var wordListNonProfane = [
 	'Drake',
 	'eye',
 	'Vex',
-	'interstellar',
+	'Interstellar',
 	'MENS',
 	'NO',
 	'MORE',
@@ -313,7 +313,12 @@ var wordListNonProfane = [
 	'cheese',
 	'flex',
 	'noflex',
-	'zone'
+	'zone',
+	'thou',
+	'who',
+	'drive',
+	'drivers',
+	'best'
 
 ];
 var profanity = [
